@@ -34,6 +34,8 @@ static CGColorRef kAboutWindowCreditsFadeColor2 = NULL;
 
 @implementation AboutWindowController
 
+@synthesize isStopped;
+
 #pragma mark - Initialization & disposal
 
 + (void)initialize {
@@ -58,6 +60,12 @@ static CGColorRef kAboutWindowCreditsFadeColor2 = NULL;
 	self.creditsView.wantsLayer = YES;
 	[self.applicationVersionLabel.cell setPlaceholderString:versionString];
 	[self.copyrightLabel.cell setPlaceholderString:self.applicationCopyrightString];
+    
+    //Added by Alfonso
+    
+    self.isStopped = false;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toggleScrolling:) name:@"kMyMouseDownNotification" object:NULL];
 }
 
 - (void)showWindow:(id)sender {
@@ -68,6 +76,43 @@ static CGColorRef kAboutWindowCreditsFadeColor2 = NULL;
 - (void)windowWillClose:(NSNotification *)note {
 	[self stopCreditsScrollAnimation];
 }
+
+#pragma mark - Added by Alfonso
+
+-(void)toggleScrolling:(id)obj
+{
+    if (self.isStopped == true)
+    {
+        self.isStopped = false;
+        [self resumeLayer:self.creditsRootLayer];
+        
+        
+    }
+    else
+    {
+        self.isStopped = true;
+        [self pauseLayer:self.creditsRootLayer];
+        
+    }
+    
+}
+
+-(void)pauseLayer:(CALayer*)layer {
+    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    layer.speed = 0.0;
+    layer.timeOffset = pausedTime;
+}
+
+-(void)resumeLayer:(CALayer*)layer {
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.speed = 1.0;
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    layer.beginTime = timeSincePause;
+}
+
+
 
 #pragma mark - User actions
 
