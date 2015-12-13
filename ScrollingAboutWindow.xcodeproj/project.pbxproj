@@ -16,6 +16,7 @@
 		73F2281B1508A0530036BD5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F2281A1508A0530036BD5B /* QuartzCore.framework */; };
 		73F2281F1508A06B0036BD5B /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2281D1508A06B0036BD5B /* AboutWindowController.m */; };
 		73F228201508A06B0036BD5B /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F2281E1508A06B0036BD5B /* AboutWindow.xib */; };
+		D725E7DD1C1CEFF700659274 /* SpecialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D725E7DC1C1CEFF700659274 /* SpecialView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		73F2281C1508A06B0036BD5B /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
 		73F2281D1508A06B0036BD5B /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
 		73F2281E1508A06B0036BD5B /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
+		D725E7DB1C1CEFF700659274 /* SpecialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialView.h; sourceTree = "<group>"; };
+		D725E7DC1C1CEFF700659274 /* SpecialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				73F2281E1508A06B0036BD5B /* AboutWindow.xib */,
 				73F2281C1508A06B0036BD5B /* AboutWindowController.h */,
 				73F2281D1508A06B0036BD5B /* AboutWindowController.m */,
+				D725E7DB1C1CEFF700659274 /* SpecialView.h */,
+				D725E7DC1C1CEFF700659274 /* SpecialView.m */,
 				73F228041508A0110036BD5B /* Supporting Files */,
 			);
 			path = ScrollingAboutWindow;
@@ -178,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D725E7DD1C1CEFF700659274 /* SpecialView.m in Sources */,
 				73F2280A1508A0110036BD5B /* main.m in Sources */,
 				73F228111508A0110036BD5B /* AppDelegate.m in Sources */,
 				73F2281F1508A06B0036BD5B /* AboutWindowController.m in Sources */,

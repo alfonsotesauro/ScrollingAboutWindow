@@ -17,6 +17,7 @@
 @property (weak) IBOutlet NSTextField *punchLineLabel;
 @property (weak) IBOutlet NSTextField *copyrightLabel;
 @property (weak) IBOutlet NSView *creditsView;
+@property (assign) BOOL isStopped;
 
 @end
 
