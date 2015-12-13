@@ -1,5 +1,18 @@
 About
 -----
+I forked this repository from [This...](https://github.com/tomaz/ScrollingAboutWindow).
+
+I studied this project as a very good example of Core Animation and CALayers.
+
+The Author left as an exercise to the user to add the ability to stop the credits animations
+
+upon a click of the mouse in the scrolling credits view. I found a solution, helped from
+
+the Apple Documentation.
+
+
+Original About
+-----
 
 Example project demonstrating usage of Core Animation to create about window with scrolling credits in Cocoa applications.
 
